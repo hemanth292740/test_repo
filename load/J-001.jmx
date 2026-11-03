@@ -508,7 +508,7 @@
           </ResponseAssertion>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy enabled="true" guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET /web/index.php/api/v2/dashboard/employees/action-summary">
+        <HTTPSamplerProxy enabled="true" guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET /web/index.php/api/v2/dashboard/employees/time-at-work">
           <elementProp elementType="Arguments" enabled="true" guiclass="HTTPArgumentsPanel" name="HTTPsampler.Arguments" testclass="Arguments" testname="User Defined Variables">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
@@ -516,7 +516,7 @@
           <stringProp name="HTTPSampler.port">${__P(ice.target.port,443)}</stringProp>
           <stringProp name="HTTPSampler.protocol">${__P(ice.target.protocol,https)}</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
-          <stringProp name="HTTPSampler.path">/web/index.php/api/v2/dashboard/employees/action-summary</stringProp>
+          <stringProp name="HTTPSampler.path">/web/index.php/api/v2/dashboard/employees/time-at-work?timezoneOffset=5.5&amp;currentDate=2026-11-03&amp;currentTime=15:49</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -588,7 +588,7 @@
           </ResponseAssertion>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy enabled="true" guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET /web/index.php/api/v2/dashboard/employees/time-at-work">
+        <HTTPSamplerProxy enabled="true" guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET /web/index.php/api/v2/dashboard/employees/action-summary">
           <elementProp elementType="Arguments" enabled="true" guiclass="HTTPArgumentsPanel" name="HTTPsampler.Arguments" testclass="Arguments" testname="User Defined Variables">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
@@ -596,7 +596,7 @@
           <stringProp name="HTTPSampler.port">${__P(ice.target.port,443)}</stringProp>
           <stringProp name="HTTPSampler.protocol">${__P(ice.target.protocol,https)}</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
-          <stringProp name="HTTPSampler.path">/web/index.php/api/v2/dashboard/employees/time-at-work?timezoneOffset=5.5&amp;currentDate=2026-11-03&amp;currentTime=15:47</stringProp>
+          <stringProp name="HTTPSampler.path">/web/index.php/api/v2/dashboard/employees/action-summary</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
