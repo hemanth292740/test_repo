@@ -516,7 +516,7 @@
           <stringProp name="HTTPSampler.port">${__P(ice.target.port,443)}</stringProp>
           <stringProp name="HTTPSampler.protocol">${__P(ice.target.protocol,https)}</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
-          <stringProp name="HTTPSampler.path">/web/index.php/api/v2/dashboard/employees/time-at-work?timezoneOffset=5.5&amp;currentDate=2026-11-03&amp;currentTime=15:51</stringProp>
+          <stringProp name="HTTPSampler.path">/web/index.php/api/v2/dashboard/employees/time-at-work?timezoneOffset=5.5&amp;currentDate=2026-11-03&amp;currentTime=15:53</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
