@@ -1,0 +1,7 @@
+diagnostics\CdpProbe.class
+test\AnimatedPrototype.class
+pages\OrangeHRMDashboard.class
+OrangeHRM\OrangeHRMBaselineRunner.class
+OrangeHRM\OrangeHRMTestRunner.class
+ResponsiveDemo\HotelResponsiveTestRunner.class
+pages\OrangeHRMLoginPage.class

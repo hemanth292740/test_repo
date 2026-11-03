@@ -1,0 +1,44 @@
+<project xmlns="https://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.changepond</groupId>
+	<artifactId>ResponsiveTesting</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<properties>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
+	</properties>
+	<dependencies>
+		<!-- Selenium ships CDP bindings only for the three Chrome majors current at its
+		     release, and DevTools.createSession() falls back to a no-op implementation once
+		     the installed Chrome runs further ahead than that. 4.43.0 bundled v145-v147,
+		     which no-ops against this machine's Chrome 153. 4.49.0 bundles v151-v153, an
+		     exact match. Chrome auto-updates, so this needs bumping roughly every time
+		     Chrome's major does; diagnostics/CdpProbe.java is the 20-second check. -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>4.49.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.deque.html.axe-core</groupId>
+			<artifactId>selenium</artifactId>
+			<version>4.10.2</version>
+		</dependency>
+
+	
+		<dependency>
+			<groupId>com.changepond.ice</groupId>
+			<artifactId>ice-sdk-java</artifactId>
+			<version>1.0.1-SNAPSHOT</version>
+		</dependency>
+
+		<!-- No slf4j binding here on purpose. ice-sdk-java logs through slf4j-api and
+		     ships no binding, which is the normal situation for a consumer project. The
+		     SDK now falls back to System.err for start/flush failures specifically, so a
+		     CDP mismatch is reported even with the NOP logger in place. Adding a binding
+		     (e.g. slf4j-simple) routes those through your own logging instead. -->
+	</dependencies>
+
+</project>
