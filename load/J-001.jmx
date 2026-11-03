@@ -516,7 +516,7 @@
           <stringProp name="HTTPSampler.port">${__P(ice.target.port,443)}</stringProp>
           <stringProp name="HTTPSampler.protocol">${__P(ice.target.protocol,https)}</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
-          <stringProp name="HTTPSampler.path">/web/index.php/api/v2/dashboard/employees/time-at-work?timezoneOffset=5.5&amp;currentDate=2026-11-03&amp;currentTime=15:49</stringProp>
+          <stringProp name="HTTPSampler.path">/web/index.php/api/v2/dashboard/employees/time-at-work?timezoneOffset=5.5&amp;currentDate=2026-11-03&amp;currentTime=15:51</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -668,7 +668,7 @@
           </ResponseAssertion>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy enabled="true" guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET /web/index.php/api/v2/buzz/feed">
+        <HTTPSamplerProxy enabled="true" guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET /web/index.php/api/v2/dashboard/shortcuts">
           <elementProp elementType="Arguments" enabled="true" guiclass="HTTPArgumentsPanel" name="HTTPsampler.Arguments" testclass="Arguments" testname="User Defined Variables">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
@@ -676,7 +676,7 @@
           <stringProp name="HTTPSampler.port">${__P(ice.target.port,443)}</stringProp>
           <stringProp name="HTTPSampler.protocol">${__P(ice.target.protocol,https)}</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
-          <stringProp name="HTTPSampler.path">/web/index.php/api/v2/buzz/feed?limit=5&amp;offset=0&amp;sortOrder=DESC&amp;sortField=share.createdAtUtc</stringProp>
+          <stringProp name="HTTPSampler.path">/web/index.php/api/v2/dashboard/shortcuts</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -688,11 +688,15 @@
             <collectionProp name="HeaderManager.headers">
               <elementProp elementType="Header" name="">
                 <stringProp name="Header.name">accept</stringProp>
-                <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
               </elementProp>
               <elementProp elementType="Header" name="">
                 <stringProp name="Header.name">accept-language</stringProp>
                 <stringProp name="Header.value">en-US,en;q=0.9</stringProp>
+              </elementProp>
+              <elementProp elementType="Header" name="">
+                <stringProp name="Header.name">cache-control</stringProp>
+                <stringProp name="Header.value">no-store, no-cache, must-revalidate, post-check=0, pre-check=0</stringProp>
               </elementProp>
               <elementProp elementType="Header" name="">
                 <stringProp name="Header.name">priority</stringProp>
@@ -744,7 +748,7 @@
           </ResponseAssertion>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy enabled="true" guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET /web/index.php/api/v2/dashboard/shortcuts">
+        <HTTPSamplerProxy enabled="true" guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET /web/index.php/api/v2/buzz/feed">
           <elementProp elementType="Arguments" enabled="true" guiclass="HTTPArgumentsPanel" name="HTTPsampler.Arguments" testclass="Arguments" testname="User Defined Variables">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
@@ -752,7 +756,7 @@
           <stringProp name="HTTPSampler.port">${__P(ice.target.port,443)}</stringProp>
           <stringProp name="HTTPSampler.protocol">${__P(ice.target.protocol,https)}</stringProp>
           <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
-          <stringProp name="HTTPSampler.path">/web/index.php/api/v2/dashboard/shortcuts</stringProp>
+          <stringProp name="HTTPSampler.path">/web/index.php/api/v2/buzz/feed?limit=5&amp;offset=0&amp;sortOrder=DESC&amp;sortField=share.createdAtUtc</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -764,15 +768,11 @@
             <collectionProp name="HeaderManager.headers">
               <elementProp elementType="Header" name="">
                 <stringProp name="Header.name">accept</stringProp>
-                <stringProp name="Header.value">application/json</stringProp>
+                <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
               </elementProp>
               <elementProp elementType="Header" name="">
                 <stringProp name="Header.name">accept-language</stringProp>
                 <stringProp name="Header.value">en-US,en;q=0.9</stringProp>
-              </elementProp>
-              <elementProp elementType="Header" name="">
-                <stringProp name="Header.name">cache-control</stringProp>
-                <stringProp name="Header.value">no-store, no-cache, must-revalidate, post-check=0, pre-check=0</stringProp>
               </elementProp>
               <elementProp elementType="Header" name="">
                 <stringProp name="Header.name">priority</stringProp>
